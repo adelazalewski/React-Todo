@@ -24,6 +24,9 @@ addItem = (itemTask) => {
     ...this.state,
     data: [...this.state.data, newItem]
   });
+  localStorage.setItem(newItem.task, itemTask);
+  const getItemFromStorage = localStorage.getItem(newItem.task); 
+  console.log(getItemFromStorage)
 };
 clearCompleted = (e) => {
   e.preventDefault();

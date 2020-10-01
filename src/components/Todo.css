@@ -39,7 +39,9 @@
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
   }
   form > input {
     background-color: #2d2d37;
