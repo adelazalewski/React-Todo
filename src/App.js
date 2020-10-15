@@ -24,9 +24,14 @@ addItem = (itemTask) => {
     ...this.state,
     data: [...this.state.data, newItem]
   });
-  localStorage.setItem(newItem.task, itemTask);
-  const getItemFromStorage = localStorage.getItem(newItem.task); 
-  console.log(getItemFromStorage)
+  // if(window.localStorage.getItem("todoapp2020ade")){
+  //   return JSON.parse(window.localStorage.getItem("todoapp2020ade"));
+  // } else{
+  //   window.localStorage.setItem("todoapp2020ade", JSON.stringify(newItem));
+  //   return newItem;
+  // }
+   
+  
 };
 clearCompleted = (e) => {
   e.preventDefault();
@@ -57,7 +62,8 @@ toggleItem = (itemId) => {
     return (
       <>
       <div className="header">
-        <h1>Keep yourself organised with this To-Do App</h1>
+        <h1>React To-Do App</h1>
+        <p>Keep Yourself Organized</p>
       </div>
       <TodoList data={this.state.data} toggleItem={this.toggleItem}/>
       <TodoForm addItem={this.addItem} clearCompleted={this.clearCompleted}/>
